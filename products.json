@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Zapatillas de Basquet",
+    "description": "Giannis Immortality 2",
+    "price": 120000,
+    "stock": 25,
+    "code": "ZBN001",
+    "category": "Basquet",
+    "status": "true",
+    "thumbnails": [],
+    "id": "4f556aaa988f8a3bab1c2b35a4ec75f9"
+  },
+  {
+    "title": "Zapatillas de Basquet",
+    "description": "Giannis Immortality 3",
+    "price": 100000,
+    "stock": 10,
+    "code": "ZBN002",
+    "category": "Basquet",
+    "status": "true",
+    "thumbnails": [],
+    "id": "a50f86267008e906c4c1210a0394c567"
+  },
+  {
+    "title": "Zapatillas de Basquet",
+    "description": "Giannis Immortality 3",
+    "price": 100000,
+    "stock": 10,
+    "code": "ZBN002",
+    "category": "Basquet",
+    "status": "true",
+    "thumbnails": [],
+    "id": "a50f86267008e906c4c1210a0394c567"
+  }
+]
