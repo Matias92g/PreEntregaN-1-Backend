@@ -9,4 +9,4 @@ app.use(express.urlencoded({extended:true}))
 /// Routes 
 
 app.use('/api/products', routerProd)
-app.listen (PORT, ()=>{console.log(`Server run in port ${PORT}`)})
+app.listen (PORT, ()=>{console.log(`Server run in port ${PORT}`)})  

@@ -24,7 +24,7 @@ export class ProductManager {
         const existProd = prods.find(producto => producto.id === prod.id)
         if (existProd) {
             return false
-        }else {
+        } else {
             prod.id = crypto.randomBytes(16).toString('hex')
             prods.push(prod)
             await fs.writeFile(this.path, JSON.stringify(prods))
@@ -44,7 +44,7 @@ export class ProductManager {
             prod.category = producto.category
             prod.status = producto.status
             prod.thumbnails = producto.thumbnails
-            prods.push(prod)
+            prods.filter(producto => producto.id !== prod.id)
             await fs.writeFile(this.path, JSON.stringify(prods))
             return true
         } else {
