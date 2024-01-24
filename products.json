@@ -1,24 +1,24 @@
 [
-  {
-    "title": "Zapatillas de Basquet",
-    "description": "Giannis Immortality 2",
-    "price": 654654846,
-    "stock": 10,
-    "code": "ZBN002",
-    "category": "Basquet",
-    "status": "true",
-    "thumbnails": [],
-    "id": "c191f446a092956992bec982e35ad04c"
-  },
-  {
-    "title": "Botines de futbol",
-    "description": "Adidas Predator",
-    "price": 120056,
-    "stock": 30,
-    "code": "BA001",
-    "category": "Futbol",
-    "status": "true",
-    "thumbnails": [],
-    "id": "73c5add1246bac5d9590912a8a580531"
-  }
+    {
+        "title": "Zapatillas de Basquet",
+        "description": "Giannis Immortality 2",
+        "price": 654654846,
+        "stock": 10,
+        "code": "ZBN002",
+        "category": "Basquet",
+        "status": "true",
+        "thumbnails": [],
+        "id": "c191f446a092956992bec982e35ad04c"
+    },
+    {
+        "title": "Botines de futbol",
+        "description": "Adidas Predator",
+        "price": 120056,
+        "stock": 30,
+        "code": "BA001",
+        "category": "Futbol",
+        "status": "true",
+        "thumbnails": [],
+        "id": "73c5add1246bac5d9590912a8a580531"
+    }
 ]
