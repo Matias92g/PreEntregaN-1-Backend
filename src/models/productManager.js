@@ -1,8 +1,6 @@
 import { promises as fs } from "fs";
 import crypto from "crypto"
 
-//crypto.randomBytes(16).toString('hex')// Genera id únicos
-
 export class ProductManager {
     constructor(path) {
         this.path = path

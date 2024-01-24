@@ -1,7 +1,8 @@
 import { promises as fs } from "fs";
-import crypto from "crypto"
 import { fileURLToPath } from "url";
 import { join, dirname } from "path";
+import crypto from "crypto"
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -14,12 +15,12 @@ export class CartManager {
 
     async addCart() {
         const carts = JSON.parse(await fs.readFile(this.path), 'utf-8', null, 2)
-        const existCart = carts.find(cart => cart.id === cart.id)
+        const existCart = carts.find(cart => cart.id === cart.cid)
         if (existCart) {
             return false
         } else {
-            const idCart = carts.length ? carts[carts.length - 1].id + 1 : 1
-            const newCart = { "Carrito de compras - id": idCart, "products": [] }
+            carts.id = crypto.randomBytes(16).toString('hex')
+            const newCart = { "id": carts.id, "products": [] }
             carts.push(newCart)
             await fs.writeFile(this.path, JSON.stringify(carts))
             return true
@@ -27,23 +28,23 @@ export class CartManager {
     }
 
 
-    async getCartById(id) {
+    async getCartById(cid) {
         const carts = JSON.parse(await fs.readFile(this.path), 'utf-8', null, 2)
-        const cart = carts.find(cart => cart.id === id)
-
+        const cart = carts.find(cart => cart.id === cid)
         return cart
     }
 
     async addProductToCart(cid, pid) {
         const carts = JSON.parse(await fs.readFile(this.path))
-        const cart = carts.find(cart => cart.id === cid)
+        const cart = carts.findIndex(cart => cart.id === cid)
         const prods = JSON.parse(await fs.readFile(this.path2))
-        const prod = prods.find(producto => producto.id === pid)
-        if (prod && cart) {
-            return false
+        const prod = carts.findIndex(producto => producto.id === pid)
+        if (prod != -1) {
+            return carts[prod].quantity++
         } else {
-            cart.push({ "id": pid, "quantity": 1 })
-            await fs.writeFile(this.path, JSON.stringify(prods))
+            newCart = await this.addCart(cart)
+            cart.push(prod)
+            await fs.writeFile(this.path, JSON.stringify(prod))
             return true
         }
     }
