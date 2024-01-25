@@ -1,18 +1,7 @@
-[
-    {
-        "id": "bfc44b7030fda008f2eb91690dec204e",
-        "products": []
-    },
-    {
-        "id": "4e7db4b4df32e6ed250adcb962ccef3a",
-        "products": []
-    },
-    {
-        "id": "66e4616af1b5838ef91ea18bad3b633b",
-        "products": []
-    },
-    {
-        "id": "3d6f33fbd0afb26fe91867392d6cabe9",
-        "products": []
-    }
-]
+{
+  "id": "1cb01b015923d4abb19acfa1dbc2f307",
+  "products": [
+    { "id": "c191f446a092956992bec982e35ad04c", "quantity": 4 },
+    { "id": "73c5add1246bac5d9590912a8a580531", "quantity": 3 }
+  ]
+}
