@@ -1,7 +1,9 @@
 {
-  "id": "1cb01b015923d4abb19acfa1dbc2f307",
+  "id": "5877f8491ca0839e254f547fa07cf36f",
   "products": [
-    { "id": "c191f446a092956992bec982e35ad04c", "quantity": 4 },
-    { "id": "73c5add1246bac5d9590912a8a580531", "quantity": 3 }
+    {
+      "id": "c191f446a092956992bec982e35ad04c",
+      "quantity": null
+    }
   ]
 }

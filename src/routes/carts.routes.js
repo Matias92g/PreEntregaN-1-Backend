@@ -8,8 +8,9 @@ routerCart.post('/', async (req, res) => {
     const cart = await cartManager.addCart()
     if (cart) {
         res.status(201).send("Carrito creado correctamente")
-    } else
+    } else {
         res.status(200).send(cart)
+    }
 })
 routerCart.get('/:cid', async (req, res) => {
     const { cid } = req.params
@@ -24,9 +25,9 @@ routerCart.post('/:cid/products/:pid', async (req, res) => {
     const { cid, pid } = req.params
     const addToCart = await cartManager.addProductToCart(cid, pid)
     if (addToCart) {
-        res.status(201).send(`Se agregó correctamente el producto ${pid}`)
+        res.status(201).send(`Se agregó correctamente el producto ${pid} al carrito ${cid}`)
     } else {
-        res.status(400).send(`Algo salió mal. No se pudo agregar el producto ${pid} al carrito${cid}`)
+        res.status(400).send(`Algo salió mal. No se pudo agregar el producto ${pid} al carrito ${cid}`)
     }
 })
 export default routerCart

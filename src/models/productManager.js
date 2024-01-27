@@ -19,7 +19,7 @@ export class ProductManager {
 
     async addProduct(prod) {
         const prods = JSON.parse(await fs.readFile(this.path), 'utf-8', null, 2)
-        const existProd = prods.find(producto => producto.id === prod.id)
+        const existProd = prods.find(producto => producto.id === id)
         if (existProd) {
             return false
         } else {
